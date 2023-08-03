@@ -32,28 +32,28 @@ df['VII'] = np.where( df['y'] < 0.3, 0.5 + pow(df['IIb'], 2)/4 , np.where( df['y
 fig, axes = plt.subplots(4,2, figsize=(10,8), sharex=True, sharey=True, dpi=120)
 
 axes[0,0].scatter(df['I'], df['y'], alpha=0.5)
-axes[0,0].set_title('I - Random')
+axes[0,0].set_title('1 - Random')
 
 axes[0,1].scatter(df['IIa'], df['y'], alpha=0.5)
-axes[0,1].set_title('IIa - Linear Correlation')
+axes[0,1].set_title('2a - Linear Correlation')
 
 axes[1,0].scatter(df['IIb'], df['y'], alpha=0.5)
-axes[1,0].set_title('IIb - Linear Anti-Correlation')
+axes[1,0].set_title('2b - Linear Anticorrelation')
 
 axes[1,1].scatter(df['III'], df['y'], alpha=0.5)
-axes[1,1].set_title('III - Partial Linear Correlation')
+axes[1,1].set_title('3 - Partial Linear Correlation')
 
 axes[2,0].scatter(df['IV'], df['y'], alpha=0.5)
-axes[2,0].set_title('IV - Step Function')
+axes[2,0].set_title('4 - Step Function')
 
 axes[2,1].scatter(df['V'], df['y'], alpha=0.5)
-axes[2,1].set_title('V - Non-linear Monotonic')
+axes[2,1].set_title('5 - Nonlinear Monotonic')
 
 axes[3,0].scatter(df['VI'], df['y'], alpha=0.5)
-axes[3,0].set_title('VI - Non-linear Non-monotonic')
+axes[3,0].set_title('6 - Nonlinear Nonmonotonic')
 
 axes[3,1].scatter(df['VII'], df['y'], alpha=0.5)
-axes[3,1].set_title('VII - Non-bijective')
+axes[3,1].set_title('7 - Nonbijective')
  
 #plt.savefig('univariate_relationships.svg', format='svg', dpi=300)
 plt.savefig('univariate_relationships.png',  dpi=300)
